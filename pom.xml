@@ -10,6 +10,14 @@
     <packaging>pom</packaging>
     <modules>
         <module>CustomIterator</module>
+        <module>friends-service</module>
+        <module>profile-service</module>
+        <module>photo-service</module>
+        <module>chat-service</module>
+        <module>post-service</module>
+        <module>recommendation-service</module>
+        <module>gift-service</module>
+        <module>calls-service</module>
     </modules>
 
     <properties>
@@ -17,6 +25,27 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.10.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>5.9.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>5.9.0</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 
 </project>
