@@ -1,6 +1,8 @@
 package service;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import entity.User;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -17,13 +19,15 @@ class CallsServiceTest {
 
     @Test
     void testCall() {
+        User user = mock(User.class);
         doNothing().when(callsService)
-                .call();
+                .call(user);
 
-        callsService.call();
+        callsService.call(user);
+        callsService.call(user);
 
-        verify(callsService, times(1))
-                .call();
+        verify(callsService, times(2))
+                .call(user);
     }
 
 
